@@ -1,0 +1,170 @@
+{
+  "plugin.dependencies": "",
+  "plugin.load-before": "",
+  "plugin.version": "0.0.1",
+  "debug-build-mode": false,
+  "open-tab": 0,
+  "plugin-components": [
+    {"=": "comp-plugin-enable"},
+    {
+      "children": [
+        {
+          "=": "org.bukkit.command.CommandSender#sendMessage(java.lang.String)",
+          "parameters": [
+            {"=": "expr-command-sender"},
+            {
+              "=": "expr-string",
+              "parameters": ["&a&lThanks for using &c&lCommandsPlus"]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.command.CommandSender#sendMessage(java.lang.String)",
+          "parameters": [
+            {"=": "expr-command-sender"},
+            {
+              "=": "expr-string",
+              "parameters": ["&cList of the Commands:"]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.command.CommandSender#sendMessage(java.lang.String)",
+          "parameters": [
+            {"=": "expr-command-sender"},
+            {
+              "=": "expr-string",
+              "parameters": ["&b---------------------------------"]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.command.CommandSender#sendMessage(java.lang.String)",
+          "parameters": [
+            {"=": "expr-command-sender"},
+            {
+              "=": "expr-string",
+              "parameters": ["&7/wc - set's the weather to Clear"]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.command.CommandSender#sendMessage(java.lang.String)",
+          "parameters": [
+            {"=": "expr-command-sender"},
+            {
+              "=": "expr-string",
+              "parameters": ["&7/wt - set's the weather to Thunder"]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.command.CommandSender#sendMessage(java.lang.String)",
+          "parameters": [
+            {"=": "expr-command-sender"},
+            {
+              "=": "expr-string",
+              "parameters": ["&7/wr - set's the weather to Rain"]
+            }
+          ]
+        },
+        {
+          "=": "org.bukkit.command.CommandSender#sendMessage(java.lang.String)",
+          "parameters": [
+            {"=": "expr-command-sender"},
+            {
+              "=": "expr-string",
+              "parameters": ["&b---------------------------------"]
+            }
+          ]
+        }
+      ],
+      "=": "comp-command",
+      "parameters": [
+        "commandsplus",
+        "cmdp",
+        "Pulls up the default Help Commands.",
+        "cmdp.usehelp",
+        "&cYou Cannot use this Command!",
+        "/commandsplus or /cmdp"
+      ]
+    },
+    {
+      "children": [{
+        "=": "org.bukkit.entity.Player#performCommand(java.lang.String)",
+        "parameters": [
+          {"=": "expr-command-sender"},
+          {
+            "=": "expr-string",
+            "parameters": ["weather clear"]
+          }
+        ]
+      }],
+      "=": "comp-command",
+      "parameters": [
+        "wc",
+        "",
+        "Set's the weather to clear",
+        "cmdp.weatherc",
+        "&cYou Cannot use this Command!",
+        "/wc"
+      ]
+    },
+    {
+      "children": [{
+        "=": "org.bukkit.entity.Player#performCommand(java.lang.String)",
+        "parameters": [
+          {"=": "expr-command-sender"},
+          {
+            "=": "expr-string",
+            "parameters": ["weather rain"]
+          }
+        ]
+      }],
+      "=": "comp-command",
+      "parameters": [
+        "wr",
+        "",
+        "Set's the weather to Rain",
+        "cmdp.rain",
+        "&cYou Cannot use this Command!",
+        ""
+      ]
+    },
+    {
+      "children": [{
+        "=": "org.bukkit.entity.Player#performCommand(java.lang.String)",
+        "parameters": [
+          {"=": "expr-command-sender"},
+          {
+            "=": "expr-string",
+            "parameters": ["weather thunder"]
+          }
+        ]
+      }],
+      "=": "comp-command",
+      "parameters": [
+        "wt",
+        "",
+        "Set's the weather to thunder",
+        "cmdp.thunder",
+        "&cYou Cannot use this Command!",
+        ""
+      ]
+    }
+  ],
+  "plugin.soft-dependencies": "",
+  "plugin.name": "CommandsPlus",
+  "plugin.prefix": "CMDP",
+  "current-plugin-component": 0,
+  "plugin.author": "CusolC",
+  "plugin.description": "Adds new Commands to the default minecraft commands. Also works with essentials",
+  "plugin.permissions": "",
+  "open-plugin-components": [
+    4,
+    3,
+    2,
+    1
+  ],
+  "plugin.website": ""
+}
